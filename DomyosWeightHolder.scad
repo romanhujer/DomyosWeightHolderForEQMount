@@ -1,5 +1,5 @@
 /* 
-    Domynos weight holder
+    Domyos weight holder
         
 
    Copyright (c) 2020 Roman Hujer   http://hujer.net
@@ -19,7 +19,7 @@
 
   Description: 
   
-     Domynos weight holder for EQ5 or others telescope mounts 
+     Domyos weight holder for EQ5 or others telescope mounts 
   
 
 */
