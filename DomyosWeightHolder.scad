@@ -42,8 +42,8 @@ Weigh_Thred_pitch = 3;
 
 // Render model select (for export to .stl  select only one model)  1 = enable  0 = disable render
 Holder = 1;
-Nuts  = 1;
-Knob = 1; 
+Nuts  = 0;
+Knob = 0; 
 
 
 
