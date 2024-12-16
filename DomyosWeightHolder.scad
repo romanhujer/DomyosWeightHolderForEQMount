@@ -28,23 +28,23 @@ use <threads.scad>
 use <nuts_and_bolts.scad>
 
 //Set Rod diametr 20.5 mm  EQ5 (default), 18.5 mm  EQ6 (NEQ6)or GS280 or 12.5 mm for  Seben EQ3 or  BRESSER EQ3 (Lidl Sope)
-Rod_dia = 20.5;
+Rod_dia = 12.2;
 
 //Weigh Therd diameter  (disk hole) default is 29 mm for  Domyos weight disk
 Weigh_Thred_dia = 29; 
 
 //Weigh Therd long {default is 60 mm)
-Weigh_Thred_long = 60;
+Weigh_Thred_long = 220;
 
 //Weigh Therd pitch {default is 3 mm)
 Weigh_Thred_pitch = 3;
 
 
 // Render model select (for export to .stl  select only one model)  1 = enable  0 = disable render
-Holder = 1;
+Holder = 0;
 Nuts  = 0;
 Knob = 0; 
-
+SAM = 1;
 
 
 if( Nuts == 1) {
@@ -67,6 +67,26 @@ if ( Holder == 1) {
      }
    }   
 }
+
+
+if ( SAM == 1) {
+   difference() {
+    union(){
+//     cylinder (h = 200, r=30 );
+    metric_thread (diameter=Weigh_Thred_dia, pitch=Weigh_Thred_pitch, length=Weigh_Thred_long, internal=false );
+    }
+    {
+    cylinder (h = Weigh_Thred_long, r=Rod_dia/2 );
+ #   cylinder (h = 6, d2=Rod_dia, d1=16 );   
+      
+    
+    }   
+}
+}
+
+
+
+
 
 if ( Knob == 1) {
 
